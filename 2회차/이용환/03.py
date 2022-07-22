@@ -5,7 +5,17 @@ from pprint import pprint
 def ranking():
     pass 
     # 여기에 코드를 작성합니다.  
-
+    URL = 'https://api.themoviedb.org/3'
+    movie = '/movie/popular'
+    params = { 'api_key' : '896988be1c1bb3801b7d75f69bd7b9a5', 'language' : 'ko-KR'}
+    result = requests.get(URL+movie, params = params).json()
+    data = result['results']
+    ranking = sorted(data, key=lambda movie: (movie['vote_average']), reverse=True)
+    vote = []
+    for i in range(0, len(ranking)):
+        if i <= 4:
+            vote.append(ranking[i])
+    return vote
 
 # 아래의 코드는 수정하지 않습니다.
 if __name__ == '__main__':
