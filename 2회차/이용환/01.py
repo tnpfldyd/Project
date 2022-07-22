@@ -11,7 +11,7 @@ def popular_count():
     data = result['results']
     cnt = 0
     for i in data:
-        cnt += 1
+        cnt += 1 # 영화 갯수에 따라 카운트 + 1
     return cnt
  
 # 아래의 코드는 수정하지 않습니다.
