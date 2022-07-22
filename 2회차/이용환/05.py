@@ -32,8 +32,8 @@ def credits(title):
         cast_crew['cast'] = cast2 # 키 cast 안에 값 id 가 10 미만인 사람 이름만 모아서 추가
         cast_crew['crew'] = crew2 # 키 crew 안에 값 Directing 사람 이름만 모아서 추가
         return cast_crew # 반환 값 딕셔너리
-    except:
-        print() # 오류날시 None 출력
+    except IndexError:
+        return None # 오류날시 None 출력
 
 # 아래의 코드는 수정하지 않습니다.
 if __name__ == '__main__':

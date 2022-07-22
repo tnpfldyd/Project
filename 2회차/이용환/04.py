@@ -21,8 +21,8 @@ def recommendation(title):
         for i in range(len(cnt)):
             title_list.append(cnt[i]['original_title']) # 영화 이름만 title_list 에 추가
         return title_list # 반환값, 추천 영화가 없을 경우 [] 반환
-    except:
-        print() # 오류 날시 None 출력
+    except IndexError:
+        return None # 오류 날시 None 출력
 
 # 아래의 코드는 수정하지 않습니다.
 if __name__ == '__main__':
