@@ -12,7 +12,7 @@ def ranking():
     data = result['results']
     ranking = sorted(data, key=lambda movie: (movie['vote_average']), reverse=True)
     vote = []
-    for i in range(0, len(ranking)):
+    for i in range(len(ranking)):
         if i <= 4:
             vote.append(ranking[i])
     return vote

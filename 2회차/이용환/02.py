@@ -11,8 +11,8 @@ def vote_average_movies():
     result = requests.get(URL+movie, params = params).json()
     data = result['results']
     vote = []
-    for i in range(0, len(data)):
-      if data[i]['vote_average'] >= 8:
+    for i in range(len(data)):
+      if data[i]['vote_average'] >= 8: # 평점 8점 이상인 결과만 vote에 추가
         vote.append(data[i])
     return vote
 
