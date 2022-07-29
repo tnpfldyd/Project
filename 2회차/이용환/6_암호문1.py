@@ -25,5 +25,5 @@ while True:
                 del result1[0:v]
             print('#'+str(i), *Text[0:10])
  
-    except EOFError:
+    except EOFError: # 입력이 끝날때까지 작동
         break
